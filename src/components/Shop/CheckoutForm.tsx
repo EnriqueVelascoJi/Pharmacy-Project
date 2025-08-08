@@ -62,7 +62,7 @@ export default function CheckoutModal({ cart, onCancel, onConfirm }: Props) {
   };
 
   return (
-    <div className="fixed inset-0 bg-white overflow-auto p-8 max-h-screen flex flex-col max-w-screen mx-auto rounded-lg shadow-lg">
+    <div className="fixed left-20 right-20 top-20 bottom-20 bg-white overflow-auto p-8 max-h-[calc(100vh-64px)] flex flex-col max-w-screen mx-auto rounded-lg shadow-lg">
       
       {/* Botón cerrar */}
       <button
