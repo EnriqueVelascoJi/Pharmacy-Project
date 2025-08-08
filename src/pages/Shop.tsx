@@ -392,22 +392,24 @@ export default function Shop() {
 
         {checkoutOpen && (
           <div className="fixed inset-0 bg-gray-800/50  flex items-center justify-center z-50 p-4">
-            <CheckoutForm onCancel={closeCheckout} onConfirm={confirmOrder} />
+            <CheckoutForm cart={cart} onCancel={closeCheckout} onConfirm={confirmOrder} />
           </div>
         )}
 
         {orderConfirmed && (
-          <div className="fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded shadow-lg z-50 animate-fadeIn">
-            ¡Gracias por tu compra!
+          <div className="fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded shadow-lg z-50 flex items-center space-x-4 animate-fadeIn max-w-sm">
+            <span>¡Gracias por tu compra!</span>
             <button
-              className="ml-4 font-bold"
               onClick={() => setOrderConfirmed(false)}
               aria-label="Cerrar notificación"
+              className="font-bold cursor-pointer text-white hover:text-green-200"
+              style={{ lineHeight: 1 }}
             >
               ×
             </button>
           </div>
         )}
+
       </div>
     </>
   );
